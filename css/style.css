@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 2em;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 700;
+    background-color: whitesmoke;
+}
+
+header h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+body{
+    background-image: url('https://revistadigital.inesem.es/idiomas/files/2016/10/bookcase-books-bookshelf-1166657-1020x680.jpg');
+}
+
+.wrapper{
+    margin: 0 15%; 
+}
+
+.wrapper .areaSaveTask{
+    padding: 5%;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    display: block;
+}
+
+.wrapper .areaSearchTask{
+    padding: 5%;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    display: block;
+}
