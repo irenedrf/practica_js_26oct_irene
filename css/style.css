@@ -26,16 +26,29 @@ body{
     margin: 0 15%; 
 }
 
-.wrapper .areaSaveTask{
-    padding: 5%;
+.wrapper .areaSaveTask, .wrapper .areaSearchTask{
+    padding: 3% 15%;
     background-color: whitesmoke;
     border: 2px solid black;
-    display: block;
+    
 }
 
-.wrapper .areaSearchTask{
-    padding: 5%;
-    background-color: whitesmoke;
-    border: 2px solid black;
-    display: block;
+input{
+    margin-right: 10em;
+}
+
+button{
+    margin-left: 5em;
+}
+
+.red{
+    background-color: tomato;
+}
+
+.green{
+    background-color: lime;
+}
+
+.blue{
+    background-color: lightskyblue;
 }
