@@ -1,20 +1,34 @@
+//práctica 26 oct
 const taskList = [
     {
-        id: 1,
-        priority: 'Alta',
+
+        priority: 'urgente',
         title: 'Estudiar Javascript'
     },
     {
-        id: 2,
-        priority: 'Baja',
-        title: 'Lavar platos'
+
+        priority: 'diaria',
+        title: 'lavar platos'
     },
     {
-        id: 3,
-        priority: 'Media',
+
+        priority: 'mensual',
         title: 'Cocinar'
+    },
+    {
+
+        priority: 'mensual',
+        title: 'regar las plantas'
+    },
+    {
+
+        priority: 'urgente',
+        title: 'Barrer'
+    },
+    {
+
+        priority: 'diaria',
+        title: 'fregar'
     }
 
 ]
-
-const urgencyType = ['Diaria', 'Semanal', 'Mensual'];

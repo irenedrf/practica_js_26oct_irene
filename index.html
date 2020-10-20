@@ -18,26 +18,42 @@
 
         <div class="wrapper">
 
-            <div class="areaSaveTask">
-                <input type="text" id='addTask'>
-                <select id="howOften"></select>
+            <section class="areaSaveTask">
+                <input type="text" id="addTsk" placeholder="Escribe aquí la tarea a añadir">
+                <select id="howOften">
+                    <option value="defaultSelected">Selecciona una prioridad</option>
+                    <option value="urgente">URGENTE</option>
+                    <option value="diaria">DIARIA</option>
+                    <option value="mensual">MENSUAL</option>
+                </select>
                 <button id="buttonSave">Guardar tarea</button>
-            </div>
+            </section>
 
-            <div class="areaSearchTask">
+            <section class="areaSearchTask">
                 <input type="text" id='searchTask'>
-                <select id="howOften"></select>
-            </div>
+                <select id="howOften">
+                    <option value="defaultSelected">Selecciona una prioridad</option>
+                    <option value="urgente">URGENTE</option>
+                    <option value="urgente">DIARIA</option>
+                    <option value="urgente">MENSUAL</option>
+                </select>
+            </section>
 
-            <div id='areaPrintTask'>
-                <!-- <h2>Title</h2>
-                <p>Priority: </p>
-                <button>ELIMINAR TAREA</button> -->
+            <section id='areaPrintTask'>
+                <!-- 
+                    <div>
+                    <h2>Title</h2>
+                    <p>Priority: </p>
+                    <button>ELIMINAR TAREA</button> 
+                    </div>
+            -->
 
-            </div>
+
+            </section>
 
         </div>
     </main>
+    <script src="js/eventos.js"></script>
     <script src="js/funciones.js"></script>
 </body>
 
