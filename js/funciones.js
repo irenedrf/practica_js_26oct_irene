@@ -1,6 +1,16 @@
 //práctica 26 oct
 //capturar elementos del dom
 
+function addTask(pInputTitle, pInputPriority) {
+    const newTask = {
+        priority: pInputPriority,
+        title: pInputTitle
+    }
+    taskList.push(newTask);
+    printTasks(taskList, printableSection);
+}
+
+
 function printTasks(pTaskList, pSection) { //NO COMPROBADA DEL TODO PERO PARECE FUNCIONAR BIEN
     if (pTaskList.length != 0) {
         pSection.innerHTML = "";
@@ -26,6 +36,14 @@ function printOneTask(pTask, pSection) { //FUNCIONA BIEN NO TOCAR
     buttonErase.value = 'ELIMINAR';
     buttonErase.type = "submit";
 
+    if (pTask.priority == "urgente") {
+        taskArticle.classList = "red";
+    } else if (pTask.priority == "diaria") {
+        taskArticle.classList = "green";
+    } else {
+        taskArticle.classList = "blue";
+    }
+
     divButton.appendChild(buttonErase);
     divTitle.appendChild(name);
     taskArticle.appendChild(divTitle);
@@ -47,4 +65,10 @@ function filterTasksByWord(pTaskList, pWord) {
         ));
     return result;
 }
+
+
+
+
+//llamamos para que imprima lista
+printTasks(taskList, printableSection);
 
