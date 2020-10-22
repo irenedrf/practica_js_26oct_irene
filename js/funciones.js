@@ -75,7 +75,7 @@ function filterTasksByWord(pTaskList, pWord) {
     const result = pTaskList.filter(task =>
         task.title.toLowerCase().includes(pWord.toLowerCase()
         ));
-    return result;
+    return printTasks(result, printableSection);
 }
 
 

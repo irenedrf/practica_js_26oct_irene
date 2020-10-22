@@ -8,11 +8,13 @@ let inputTask = document.querySelector('#addTsk');
 let inputPriority = document.querySelector('#howOften');
 let prioritySearch = document.querySelector('#howOftenSearch');
 let resetBtn = document.querySelector('#buttonReset');
+let taskToResearch = document.querySelector('#searchTask');
 
 
 addBtn.addEventListener('click', collectData);
 resetBtn.addEventListener('click', resetSearch);
 prioritySearch.addEventListener('click', collectPriority);
+taskToResearch.addEventListener('keypress', collectWord);
 
 
 function resetSearch() {
@@ -35,6 +37,10 @@ function collectPriority(event) {
     filterTasksByUrgency(taskList, event.target.value)
 }
 
+function collectWord(event) {
+    let wordToSearch = event.target.value;
+    filterTasksByWord(taskList, wordToSearch);
+}
 
 
 
