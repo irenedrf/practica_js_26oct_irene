@@ -5,7 +5,7 @@ function addTask(pInputTitle, pInputPriority) {
         priority: pInputPriority,
         title: pInputTitle
     }
-    let exists = agenda.findIndex(task => {
+    let exists = taskList.findIndex(task => {
         return task.title == pInputTitle && task.priority == pInputPriority;
     })
 
@@ -19,9 +19,6 @@ function addTask(pInputTitle, pInputPriority) {
     }
 
 }
-
-
-
 
 
 
@@ -49,6 +46,7 @@ function printOneTask(pTask, pSection) {
     name.innerText = pTask.title;
     buttonErase.value = 'ELIMINAR';
     buttonErase.type = "submit";
+    buttonErase.dataset.id = pTask.id;
 
     if (pTask.priority == "urgente") {
         taskArticle.classList = "red";
@@ -70,7 +68,7 @@ function printOneTask(pTask, pSection) {
 
 function filterTasksByUrgency(pTaskList, pPriorityType) {
     const result = pTaskList.filter(task => task.priority == pPriorityType);
-    return result;
+    return printTasks(result, printableSection);
 }
 
 function filterTasksByWord(pTaskList, pWord) {
