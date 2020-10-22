@@ -53,6 +53,5 @@ function eraseData(event) {
 
     let position = taskList.findIndex(task => task.id == idToErase);
     taskList.splice(position, 1);
-
 }
 

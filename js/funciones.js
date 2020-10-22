@@ -1,12 +1,12 @@
 //Irene Díaz-Roncero Fraile FULL-STACK 2020
 
-
 function addTask(pInputTitle, pInputPriority) {
     const newTask = {
         id: id,
         priority: pInputPriority,
         title: pInputTitle
     }
+
     let exists = taskList.findIndex(task => {
         return task.title == pInputTitle && task.priority == pInputPriority;
     })
