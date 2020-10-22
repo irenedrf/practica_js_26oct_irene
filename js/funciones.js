@@ -1,3 +1,5 @@
+//Irene Díaz-Roncero Fraile FULL-STACK 2020
+
 
 function addTask(pInputTitle, pInputPriority) {
     const newTask = {
@@ -44,6 +46,7 @@ function printOneTask(pTask, pSection) {
     divTitle.classList = "divTit";
     divButton.classList = "btnErase";
     name.innerText = pTask.title;
+    buttonErase.addEventListener('click', eraseData);
     buttonErase.value = 'ELIMINAR';
     buttonErase.type = "submit";
     buttonErase.dataset.id = pTask.id;

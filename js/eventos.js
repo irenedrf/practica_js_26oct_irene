@@ -1,3 +1,4 @@
+//Irene Díaz-Roncero Fraile FULL-STACK 2020
 
 const taskList = [];
 let id = 1;
@@ -45,6 +46,13 @@ function collectWord(event) {
 
 
 function eraseData(event) {
-    //SEGUIR DESDE AQUÍ: PENDIENTE DE HACER LA FUNCIÓN DE BORRADO+LINKAR PARA QUE SE IMPRIMAN Y DES-IMPRIMAN LAS COSAS
+    let articleToErase = event.target.parentNode.parentNode;
+    articleToErase.parentNode.removeChild(articleToErase);
+
+    let idToErase = event.target.dataset.id;
+
+    let position = taskList.findIndex(task => task.id == idToErase);
+    taskList.splice(position, 1);
+
 }
 
