@@ -1,17 +1,31 @@
-//práctica 26 oct
-//capturar elementos del dom
 
 function addTask(pInputTitle, pInputPriority) {
     const newTask = {
+        id: id,
         priority: pInputPriority,
         title: pInputTitle
     }
-    taskList.push(newTask);
-    printTasks(taskList, printableSection);
+    let exists = agenda.findIndex(task => {
+        return task.title == pInputTitle && task.priority == pInputPriority;
+    })
+
+    if (exists == -1) {
+        taskList.push(newTask);
+        printTasks(taskList, printableSection);
+        id++;
+
+    } else {
+        alert('Tarea duplicada');
+    }
+
 }
 
 
-function printTasks(pTaskList, pSection) { //NO COMPROBADA DEL TODO PERO PARECE FUNCIONAR BIEN
+
+
+
+
+function printTasks(pTaskList, pSection) {
     if (pTaskList.length != 0) {
         pSection.innerHTML = "";
         pTaskList.forEach(task => {
@@ -23,7 +37,7 @@ function printTasks(pTaskList, pSection) { //NO COMPROBADA DEL TODO PERO PARECE 
 }
 
 
-function printOneTask(pTask, pSection) { //FUNCIONA BIEN NO TOCAR
+function printOneTask(pTask, pSection) {
     let taskArticle = document.createElement('article');
     let divTitle = document.createElement('div');
     let divButton = document.createElement('div');
@@ -54,7 +68,7 @@ function printOneTask(pTask, pSection) { //FUNCIONA BIEN NO TOCAR
 
 
 
-function filterTasksByUrgency(pTaskList, pPriorityType) { //FUNCIONA BIEN NO TOCAR. TENEMOS QUE ASIGNAR ESTA FUNCIÓN AL DESPLEGABLE
+function filterTasksByUrgency(pTaskList, pPriorityType) {
     const result = pTaskList.filter(task => task.priority == pPriorityType);
     return result;
 }

@@ -26,3 +26,5 @@ function eraseData(event) {
     //SEGUIR DESDE AQUÍ: PENDIENTE DE HACER LA FUNCIÓN DE BORRADO+LINKAR PARA QUE SE IMPRIMAN Y DES-IMPRIMAN LAS COSAS
 }
 
+const taskList = [];
+let id = 1;
